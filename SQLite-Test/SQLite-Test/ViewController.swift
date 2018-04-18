@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SQLite
 
 class ViewController: UIViewController {
     
@@ -115,6 +116,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
+        do {
+            
+            let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let fileUrl = documentDirectory.appendingPathComponent("user").appendingPathExtension("sqlite3")
+            
+            let dataBase = try Connection(fileUrl.path )
+        } catch {
+                print("error")
+        }
         
         setView()
         
