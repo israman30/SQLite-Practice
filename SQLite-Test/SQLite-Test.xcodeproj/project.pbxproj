@@ -15,9 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8D3F9FD02087CCD2005A9CE0 /* PBXContainerItemProxy */ = {
+		8D3F9FD82087CE51005A9CE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8D3F9FCB2087CCD1005A9CE0 /* Sequel Lite.xcodeproj */;
+			containerPortal = 8D3F9FD32087CE50005A9CE0 /* Sequel Lite.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5A6795581F1C4A74007142B2;
 			remoteInfo = "Sequel Lite";
@@ -25,7 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D3F9FCB2087CCD1005A9CE0 /* Sequel Lite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Sequel Lite.xcodeproj"; path = "../../../../Downloads/SQLite-master/Sequel Lite.xcodeproj"; sourceTree = "<group>"; };
+		8D3F9FD32087CE50005A9CE0 /* Sequel Lite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Sequel Lite.xcodeproj"; path = "../../../../../Downloads/SQLite-master/Sequel Lite.xcodeproj"; sourceTree = "<group>"; };
 		8D4129C02086E62F00A3054B /* SQLite-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLite-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4129C32086E62F00A3054B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D4129C52086E62F00A3054B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,10 +46,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D3F9FCC2087CCD1005A9CE0 /* Products */ = {
+		8D3F9FD42087CE50005A9CE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D3F9FD12087CCD2005A9CE0 /* Sequel Lite.app */,
+				8D3F9FD92087CE51005A9CE0 /* Sequel Lite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,7 +59,7 @@
 			children = (
 				8D4129C22086E62F00A3054B /* SQLite-Test */,
 				8D4129C12086E62F00A3054B /* Products */,
-				8D3F9FCB2087CCD1005A9CE0 /* Sequel Lite.xcodeproj */,
+				8D3F9FD32087CE50005A9CE0 /* Sequel Lite.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,8 +133,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 8D3F9FCC2087CCD1005A9CE0 /* Products */;
-					ProjectRef = 8D3F9FCB2087CCD1005A9CE0 /* Sequel Lite.xcodeproj */;
+					ProductGroup = 8D3F9FD42087CE50005A9CE0 /* Products */;
+					ProjectRef = 8D3F9FD32087CE50005A9CE0 /* Sequel Lite.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -145,11 +145,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8D3F9FD12087CCD2005A9CE0 /* Sequel Lite.app */ = {
+		8D3F9FD92087CE51005A9CE0 /* Sequel Lite.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = "Sequel Lite.app";
-			remoteRef = 8D3F9FD02087CCD2005A9CE0 /* PBXContainerItemProxy */;
+			remoteRef = 8D3F9FD82087CE51005A9CE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
