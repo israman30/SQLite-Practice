@@ -11,6 +11,13 @@ import SQLite
 
 class ViewController: UIViewController {
     
+    var dataBase: Connection!
+    
+    let userTable = Table("user")
+    let id = Expression<Int>("id")
+    let name = Expression<String>("name")
+    let email = Expression<String>("email")
+    
     let createTable: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("Create Table", for: .normal)
@@ -22,7 +29,17 @@ class ViewController: UIViewController {
     // MARK: - Create table function
     @objc func table(){
         print("Table")
+        let createTable = self.userTable.create { (table) in
+            table.column(self.id, primaryKey: true)
+            table.column(self.name)
+            table.column(self.email, unique: true)
+        }
         
+        do {
+            
+        } catch {
+            print("Error")
+        }
     }
     
     let insertUser: UIButton = {
@@ -114,7 +131,7 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    var dataBase: Connection!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
