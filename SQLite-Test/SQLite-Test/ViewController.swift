@@ -19,8 +19,10 @@ class ViewController: UIViewController {
         return btn
     }()
     
+    // MARK: - Create table function
     @objc func table(){
         print("Table")
+        
     }
     
     let insertUser: UIButton = {
