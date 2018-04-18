@@ -111,6 +111,8 @@ class ViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    
+    var dataBase: Connection!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,11 +120,13 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         
         do {
-            
+            // We using a document manager to create a location file for storage
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            // Creating a file
             let fileUrl = documentDirectory.appendingPathComponent("user").appendingPathExtension("sqlite3")
-            
+            // With this path the db will be access from different methods
             let dataBase = try Connection(fileUrl.path )
+            self.dataBase = dataBase
         } catch {
                 print("error")
         }
