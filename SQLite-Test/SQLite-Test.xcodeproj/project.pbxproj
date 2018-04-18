@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3F9FDB2087CEB6005A9CE0 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3F9FDC2087CEB6005A9CE0 /* SQLite.framework */; };
+		8D3F9FDD2087CEE6005A9CE0 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3F9FDC2087CEB6005A9CE0 /* SQLite.framework */; };
+		8D3F9FDE2087CEE6005A9CE0 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3F9FDC2087CEB6005A9CE0 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D4129C42086E62F00A3054B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4129C32086E62F00A3054B /* AppDelegate.swift */; };
 		8D4129C62086E62F00A3054B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4129C52086E62F00A3054B /* ViewController.swift */; };
 		8D4129C92086E63000A3054B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4129C72086E63000A3054B /* Main.storyboard */; };
@@ -24,8 +27,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8D3F9FDF2087CEE6005A9CE0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D3F9FDE2087CEE6005A9CE0 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8D3F9FD32087CE50005A9CE0 /* Sequel Lite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Sequel Lite.xcodeproj"; path = "../../../../../Downloads/SQLite-master/Sequel Lite.xcodeproj"; sourceTree = "<group>"; };
+		8D3F9FDC2087CEB6005A9CE0 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4129C02086E62F00A3054B /* SQLite-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLite-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4129C32086E62F00A3054B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D4129C52086E62F00A3054B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3F9FDD2087CEE6005A9CE0 /* SQLite.framework in Frameworks */,
+				8D3F9FDB2087CEB6005A9CE0 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +74,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8D3F9FDA2087CEB6005A9CE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D3F9FDC2087CEB6005A9CE0 /* SQLite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8D4129B72086E62F00A3054B = {
 			isa = PBXGroup;
 			children = (
 				8D4129C22086E62F00A3054B /* SQLite-Test */,
 				8D4129C12086E62F00A3054B /* Products */,
 				8D3F9FD32087CE50005A9CE0 /* Sequel Lite.xcodeproj */,
+				8D3F9FDA2087CEB6005A9CE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +123,7 @@
 				8D4129BC2086E62F00A3054B /* Sources */,
 				8D4129BD2086E62F00A3054B /* Frameworks */,
 				8D4129BE2086E62F00A3054B /* Resources */,
+				8D3F9FDF2087CEE6005A9CE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
