@@ -149,7 +149,6 @@ class ViewController: UIViewController {
     
     // MARK: - Delete user
     @objc func userDelete(){
-        print("Delete User")
         let alert = UIAlertController(title: "Update User", message: nil, preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.placeholder = "User id"
