@@ -36,7 +36,8 @@ class ViewController: UIViewController {
         }
         
         do {
-            
+            try self.dataBase.run(createTable)
+            print("Table Created")
         } catch {
             print("Error")
         }
@@ -64,6 +65,15 @@ class ViewController: UIViewController {
                 let email = alert.textFields?.last?.text else {return}
             print(name)
             print(email)
+            
+            let insertUser = self.userTable.insert(self.name <- name, self.email <- email)
+            
+            do {
+                try self.dataBase.run(insertUser)
+                print("Inserted User")
+            } catch {
+                print("Error")
+            }
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
