@@ -152,20 +152,29 @@ class ViewController: UIViewController {
         }
         
         let action = UIAlertAction(title: "Submit", style: .default) { (_) in
-            guard let userIdString = alert.textFields?.first?.text else {return}
+            guard let userIdString = alert.textFields?.first?.text,
+            let userId = Int(userIdString) else {return}
             print(userIdString)
+            
+            let user = self.userTable.filter(self.id == userId)
+            let deleteUser = user.delete()
+            
+            do {
+                try self.dataBase.run(deleteUser)
+            } catch {
+                print("Error no deleted user")
+            }
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
+        // MARK: - Fetching data from SQLite
         do {
             // We using a document manager to create a location file for storage
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
