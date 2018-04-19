@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     
     let listUser: UIButton = {
         let btn = UIButton(type: .system)
-        btn.setTitle("Insert User", for: .normal)
+        btn.setTitle("List User", for: .normal)
         btn.backgroundColor = .lightGray
         btn.addTarget(self, action: #selector(userList), for: .touchUpInside)
         return btn
@@ -89,6 +89,14 @@ class ViewController: UIViewController {
     
     @objc func userList(){
         print("List User")
+        do {
+            let users = try self.dataBase.prepare(userTable)
+            for user in users {
+                print("userId: \(user[id]), name: \(user[name]), email: \(user[email])")
+            }
+        } catch {
+            print("Error listing user")
+        }
     }
     
     let updateUser: UIButton = {
@@ -113,6 +121,8 @@ class ViewController: UIViewController {
                 let email = alert.textFields?.last?.text else {return}
             print(userIdString)
             print(email)
+            
+            let 
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
