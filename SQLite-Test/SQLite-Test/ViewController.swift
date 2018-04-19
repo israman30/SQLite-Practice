@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         return btn
     }()
     
+    // MARK: - Insert User to table
     @objc func userInsert(){
         print("Insert User")
         let alert = UIAlertController(title: "Insert User", message: nil, preferredStyle: .alert)
@@ -87,6 +88,7 @@ class ViewController: UIViewController {
         return btn
     }()
     
+    // MARK: - List a user
     @objc func userList(){
         print("List User")
         do {
@@ -107,6 +109,7 @@ class ViewController: UIViewController {
         return btn
     }()
     
+    // MARK: - Update a user
     @objc func userUpdate(){
         print("Upadate User")
         let alert = UIAlertController(title: "Update User", message: nil, preferredStyle: .alert)
@@ -144,6 +147,7 @@ class ViewController: UIViewController {
         return btn
     }()
     
+    // MARK: - Delete user
     @objc func userDelete(){
         print("Delete User")
         let alert = UIAlertController(title: "Update User", message: nil, preferredStyle: .alert)
@@ -174,7 +178,13 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        // MARK: - Fetching data from SQLite
+        sequalLiteReference()
+        setView()
+        
+    }
+    
+    // MARK: - Reference SQLite block
+    func sequalLiteReference(){
         do {
             // We using a document manager to create a location file for storage
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -184,11 +194,8 @@ class ViewController: UIViewController {
             let dataBase = try Connection(fileUrl.path )
             self.dataBase = dataBase
         } catch {
-                print("error")
+            print("error")
         }
-        
-        setView()
-        
     }
     
     func setView(){
